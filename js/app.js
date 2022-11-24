@@ -9,7 +9,7 @@ const channels = [
     },
     // {
     //     name: 'directvSports',
-    //     url: 'https://dtvott-abc.akamaized.net/dash_live_1057/manifest.mpd?&ck=eyJhN2UwOWM2ZjQ3YWY1N2U5OTliNzg5ZWI1NGQzMjU1ZCIgOiAiMjYzZjZkYjEyZDZmOWFhNzJmMmNjOWIwZWYyZTI2YjIifQ=='
+    //    url: 'https://dtvott-abc.akamaized.net/dash_live_1057/manifest.mpd?&ck=eyJhN2UwOWM2ZjQ3YWY1N2U5OTliNzg5ZWI1NGQzMjU1ZCIgOiAiMjYzZjZkYjEyZDZmOWFhNzJmMmNjOWIwZWYyZTI2YjIifQ=='
     // },
     {
         name: 'tycSports',
@@ -23,6 +23,14 @@ const channels = [
         name: 'deporTv',
         url: 'https://dtvott-abc.akamaized.net/dash_live_1056/manifest.mpd?&ck=eyIwMGE3NzVkMWI5NmI1OTUxYjNjM2FiNTc5OWY5ODY4ZSIgOiAiM2E1NmRmMDA0N2RkNzA5Mzg4YzYwNmY5ZmYyZmJhZGQifQ=='
     },
+    {
+        name: 'canalDelFutbol',
+        url: 'https://90b449c9f8.player.streamlatam.com/d04315ca-13ce-4561-8f94-7f255e63aa6a'
+    },
+    // {
+    //     name: '',
+    //     url: '/sv-mt2.php?get=Ly8xMjE0LXZvcy5kdHZvdHQuY29tL0RBU0gvbWFuaWZlc3QubXBk&key=ODA2ZTc2YTgzYjczMzU3YTk2ZTE0NDZhZDE1MmZmNzE=&key2=MDAyYmFiYmIxYzU4NjlhMGYyZjhmMzRiNzExNzAwYzY='
+    // }
 ]
 let count = 0;
 
@@ -36,7 +44,7 @@ const changeChannel = (arr, i = 0) => location.hash = arr[i].name;
 
 const validHash = (hash) => {
     // saque esté canal del if hash === '#directvSports'
-    if( hash === '#tycSports' || hash === '#tvPublica' || hash === '#dSports' || hash === '#deporTv'){
+    if( hash === '#tycSports' || hash === '#tvPublica' || hash === '#dSports' || hash === '#deporTv' || hash === '#canalDelFutbol'){
         count = detectIndex(hash);
         let {url} = channels[count];
         return url;

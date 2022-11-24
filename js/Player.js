@@ -10,8 +10,8 @@ async function init(link) {
     const player = controls.getPlayer();
 
     const config = {
-            'controlPanelElements' : ['play_pause', 'time_and_duration', 'fullscreen', 'overflow_menu'],
-            'overflowMenuButtons': ['quality', 'language', 'cast', 'picture_in_picture']
+            'controlPanelElements' : ['play_pause','volume' ,'time_and_duration', 'fullscreen', 'overflow_menu'],
+            'overflowMenuButtons': ['quality','cast', 'picture_in_picture']
         }
 
     ui.configure(config);
